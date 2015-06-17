@@ -6,6 +6,10 @@
  * >Description: 
  *************************************************************/
 
+#include <iostream>
+
+using namespace std;
+
 /*
  * Given a binary tree, find its maximum depth.
  *
@@ -22,6 +26,39 @@
  * };
  */
 
+class TreeNode
+{
+public:
+	int val;
+	TreeNode* left;
+	TreeNode* right;
+	TreeNode(int x) : val(x), left(NULL), right(NULL)
+	{
+	}
+};
+
 int maxDepth(TreeNode* root)
 {
+	if(root == NULL)
+		return 0;
+
+	int countdepth = 1;
+	int countleft = 0;
+	int countright = 0;
+	if(root -> left != NULL)
+		countleft = maxDepth(root -> left);
+
+	if(root -> right != NULL)
+		countright = maxDepth(root -> right);
+
+	int temp = countleft > countright ? countleft : countright;
+
+	countdepth += temp;
+
+	return countdepth;
+}
+
+int main()
+{
+	return 0;
 }
