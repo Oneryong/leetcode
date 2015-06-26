@@ -2,7 +2,7 @@
 * >Author: zhongwanyong
 * >Email:  zwy249348626@163.com
 * >Create Time: 2015/06/09 19:30:21
-* >File Name: contains_duplicate.cpp
+* >File Name: contains_duplicate3.cpp
 * >Description: 
 *************************************************************/
 

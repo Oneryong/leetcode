@@ -49,7 +49,7 @@ int countPrimes(int n)
 
 int main()
 {
-	int n = 10;
+	int n = 2000000;
 	int result;
 	result = countPrimes(n);
 	cout << "result = " << result << endl;
