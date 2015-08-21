@@ -77,6 +77,7 @@ void PrintPrime(int m, int n)
 			}
 		}
 	}
+	cout << endl;
 }
 
 int main()

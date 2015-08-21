@@ -6,6 +6,11 @@
  * >Description: 
  *************************************************************/
 
+#include <iostream>
+#include <vector>
+#include <string>
+
+using namespace std;
 
 /*
  * Design a data structure that supports the following two operations:
@@ -29,16 +34,23 @@
  * You should be familiar with how a Trie works. If not, please work on this problem: Implement Trie (Prefix Tree) first.
  */
 
-class WordDictionary {
+class WordDictionary
+{
 	public:
 		// Adds a word into the data structure.
-		void addWord(string word) {
+		void addWord(string word)
+		{
+			vec.push_back(word);
 		}
 
 		// Returns if the word is in the data structure. A word could
 		// contain the dot character '.' to represent any one letter.
-		bool search(string word) {
+		bool search(string word)
+		{
 		}
+
+	private:
+		vector<string> vec;
 };
 
 // Your WordDictionary object will be instantiated and called as such:

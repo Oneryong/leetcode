@@ -16,11 +16,43 @@ using namespace std;
  * For example, given the range [5, 7], you should return 4.
  */
 
+//朴素的算法时间为O(n - m)
+/*
 int rangeBitwiseAnd(int m, int n)
 {
+	if(m > n || m < 0 || m > 2147483647 || n < 0 || n > 2147483647)
+		return -1;
+
+	int result = m;
+	for(int i = m + 1; i <= n; ++i)
+		result &= i;
+
+	return result;
+}
+*/
+
+int rangeBitwiseAnd(int m, int n)
+{
+	if(m > n || m < 0 || m > 2147483647 || n < 0 || n > 2147483647)
+		return -1;
+
+	int count = 0;
+	while(m != n)
+	{
+		m = m >> 1;
+		n = n >> 1;
+		++count;
+	}
+
+	return (m << count);
 }
 
 int main()
 {
+	int m = 5;
+	int n = 7;
+	int result;
+	result = rangeBitwiseAnd(m, n);
+	cout << "result = " << result << endl;
 	return 0;
 }

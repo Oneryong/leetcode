@@ -41,7 +41,7 @@ void combinationSumCore(vector<int>& candidates, int target, int start, vector<i
 	int previous = -1;  //确保在同一级别的循环中（此for循环，而不是递归的深度），candidates[i]不重复出现。
 	for(int i = start; i < candidates.size(); ++i)
 	{
-		if(pervious == candidates[i])
+		if(previous == candidates[i])
 			continue;
 
 		if(target < candidates[i])
